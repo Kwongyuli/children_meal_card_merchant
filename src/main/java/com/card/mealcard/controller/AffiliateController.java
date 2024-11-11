@@ -41,6 +41,7 @@ public class AffiliateController {
         model.addAttribute("affiliateStores", affiliateStores);
 
         return "card/list";
+        // 커밋
     }
 
 }
