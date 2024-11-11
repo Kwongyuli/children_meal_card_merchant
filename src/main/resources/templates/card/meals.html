@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Meals</title>
+</head>
+<body>
+<div>
+    <h2>목록</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>데이터작성일자</th>
+            <th>가맹점명칭</th>
+            <th>도로명주소</th>
+            <th>지번주소</th>
+            <th>업종</th>
+            <th>위도</th>
+            <th>경도</th>
+            <th>가맹점기준일자</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="meal : ${meals}">
+            <td th:text="${meal.id}">아이디</td>
+            <td th:text="${meal.data_creation_date}">데이터작성일자</td>
+            <td th:text="${meal.affiliate_name}"></td>
+            <td th:text="${meal.road_name_address}"></td>
+            <td th:text="${meal.number_address}"></td>
+            <td th:text="${meal.business_type}"></td>
+            <td th:text="${meal.latitude}"></td>
+            <td th:text="${meal.longitude}"></td>
+            <td th:text="${meal.affiliated_store_base_date}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
